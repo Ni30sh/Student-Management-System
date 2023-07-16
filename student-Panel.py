@@ -341,7 +341,6 @@ def principal_access():
 
     login_window.mainloop()
 
-
 ######################################################  EXIT STUDENT ################################################
 def exit_studt():
     rt = messagebox.askyesno("Notification", "Do you want to exit?")
