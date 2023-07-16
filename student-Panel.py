@@ -5,8 +5,6 @@ import time
 from tkinter.ttk import Treeview
 from tkinter import ttk
 import mysql.connector
-
-
 ##################################################$$$$$$$$$$$$ ADDMISSION $$$$$$$$$$$##################################
 def student_admission():
     def submit_details():
