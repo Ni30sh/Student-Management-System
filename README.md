@@ -1,6 +1,6 @@
 # Student Management System
 
-[![](https://visitcount.itsvg.in/api?id=Ni30shkumar&icon=0&color=5)](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=Student-Management-System&icon=0&color=5)](https://visitcount.itsvg.in)
 
 This is a simple student management system implemented using Python and Tkinter. It allows users to perform various operations such as student admission, fee submission, and searching for student details.
 
