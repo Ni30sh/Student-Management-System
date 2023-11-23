@@ -306,29 +306,37 @@ def exit_studt():
     var = messagebox.askyesno("Notification", "Do you want to exit?")
     if var == True:
         qwe.destroy()
-
-
 #  ######################################## connection of database ####################################################
 def database_window():
     def btn_connect_server():
         global cur, conn
-        host = host_var.get()
-        user = user_var.get()
-        password = password_var.get()
+        # host = host_var.get()
+        # user = user_var.get()
+        # password = password_var.get()
+
+        host = "localhost"
+        user = "root"
+        password = "123@Never#settle"
         try:
             conn = mysql.connector.connect(
-                host=host,
-                user=user,
-                password=password)
+                # host=host,
+                # user=user,
+                # password=password)
+                host="localhost",
+                user="root",
+                password="123@Never#settle")
             cur = conn.cursor()  # Create a cursor object
         except:
             messagebox.showerror("notification", "DATA IS INCORRECT, PLEASE TRY AGAIN.")
             return
         try:
             conn = mysql.connector.connect(
-                host=host,
-                user=user,
-                password=password)
+                # host=host,
+                # user=user,
+                # password=password)
+                host="localhost",
+                user="root",
+                password="123@Never#settle")
             cur = conn.cursor()
             strin = "CREATE DATABASE IF NOT EXISTS StudentPanel"
             cur.execute(strin)
@@ -358,9 +366,12 @@ def database_window():
         data.destroy()
         try:
             conn = mysql.connector.connect(
-                host=host,
-                user=user,
-                password=password)
+                # host=host,
+                # user=user,
+                # password=password)
+                host="localhost",
+                user="root",
+                password="123@Never#settle")
             cur = conn.cursor()
             label.config(text="C", font=('chiller', 13, 'italic bold'), bg="green")
         except mysql.connector.connect:
@@ -376,7 +387,7 @@ def database_window():
     data.title("DataBase Window")
     data.resizable(False, False)
     data.config(bg="white")
-    # ___________________________________________________________________________________connectdb label
+    # _____________________________________________connectdb label
     host1 = Label(data, text="Hostname : ", bg="white", font=("times", 14, "bold"), anchor="s")
     host1.place(x=5, y=60, height=34, width=140)
     user = Label(data, text="Username : ", bg="white", font=("times", 14, "bold"), anchor="s")
@@ -385,7 +396,7 @@ def database_window():
     password.place(x=5, y=132, height=34, width=140)
     password = Label(data, text="CONNECT TO DATABASE ", bg="white", font=("times", 15, "bold"), anchor="s")
     password.place(x=10, y=10, height=34, width=250)
-    # ______________________________________________________________________________________entry-label of connection
+    # _________________________________________________entry-label of connection
     host_var = StringVar()
     user_var = StringVar()
     password_var = StringVar()
@@ -414,7 +425,7 @@ def database_window():
     data.mainloop()
 
 
-# _____________________________________________________________________________________  CALLING TITLE BAR
+# ______________________________________________________  CALLING TITLE BAR
 colors = ["red", "green", "white", "blue", "yellow", "pink", "red2", "sky blue"]
 
 
@@ -437,7 +448,7 @@ def titlebar():
     title.after(200, titlebar)
 
 
-# ___________________________________________________________________________________________________timer panel
+# ________________________________________timer panel
 def timer():
     time_module = time.strftime("%r")
     date_module = time.strftime("%d-%m-%Y")
@@ -527,7 +538,7 @@ titlebar_color()
 clock = Label(qwe, font=('Microsoft YaHei', 10, 'bold'), fg="white", bg="gold2")
 clock.place(x=0, y=130)
 timer()
-# _________________________________________________________________________________________________ connect to database
+# _____ connect to database
 
 database_butt0n = Button(qwe, text="DATA BASE", font=('chiller', 11, 'italic bold'), relief=GROOVE,
                          borderwidth=3, bg="white", fg="black", activebackground='blue', activeforeground='white',
